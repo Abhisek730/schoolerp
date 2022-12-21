@@ -1,0 +1,55 @@
+.sidebar {
+  background-color: #000000e0;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+  justify-content: space-between;
+}
+.top-section p {
+  font-size: 20px;
+}
+.option {
+  text-align: left;
+  display: flex;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  padding: 15px;
+  transition: all 0.5s;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.option:hover {
+  background: #000;
+}
+
+.icons {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.bars {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 750px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+  }
+  .app-body {
+    margin-left: 50px;
+  }
+}

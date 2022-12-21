@@ -1,7 +1,7 @@
 import React from "react";
-import "./Home.css";
+import "../Css/Home.css";
 
-import Dashboard from "./Dashboard";
+import Dashboard from "../screen/Dashboard";
 
 export default function Home() {
   return (

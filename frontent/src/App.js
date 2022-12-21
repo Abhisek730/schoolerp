@@ -7,11 +7,12 @@ import Sidebar from "./components/Sidebar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Home from "./components/Home";
-import AddStudent from "./components/AddStudent";
-import StudentDetails from "./components/StudentDetails";
+import AddStudent from "./screen/AddStudent";
+import StudentDetails from "./screen/student details/StudentDetails";
 import StudentDeepDetails from "./components/screens/StudentDeepDetails";
-import SectionItem from "./components/screens/SectionItem";
-import FindStudent from "./components/FindStudent";
+import SectionItem from "./screen/student details/SectionItem";
+import FindStudent from "./screen/FindStudent";
+import SetRollNo from "./screen/SetRollNo";
 
 function App() {
   return (
@@ -25,14 +26,17 @@ function App() {
             <Route path="/addStudent" element={<AddStudent />}></Route>
             <Route path="/studentDetails" element={<StudentDetails />}></Route>
             <Route
+              exact
               path="/studentDeepDetails/:classid/:sectionid"
               element={<StudentDeepDetails />}
             ></Route>
             <Route
+              exact
               path="/studentDeepDetails/:classid"
               element={<SectionItem />}
             ></Route>
             <Route path="/findStudent" element={<FindStudent />}></Route>
+            <Route path="/setrollno" element={<SetRollNo />}></Route>
           </Routes>
           <ToastContainer theme="dark" />
         </div>

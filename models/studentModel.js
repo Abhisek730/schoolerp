@@ -43,6 +43,9 @@ const studentSchema = new mongoose.Schema(
             type: String,
 
         },
+        Roll_No: {
+            type: Number
+        }
 
     },
     {
