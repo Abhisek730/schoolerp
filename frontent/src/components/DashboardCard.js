@@ -1,5 +1,5 @@
 import React from "react";
-import "./Dashboard.css";
+import "../Css/Dashboard.css";
 import { Link } from "react-router-dom";
 
 export default function DashboardCard({ takeme, count, heading, subHeading }) {

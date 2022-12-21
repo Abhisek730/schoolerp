@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import "./Sidebar.css";
+import "../Css/Sidebar.css";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { RiDashboardFill } from "react-icons/ri";
 import { IoPersonAdd } from "react-icons/io5";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import { MdFindInPage } from "react-icons/md"
+import { MdFindInPage } from "react-icons/md";
+import { AiFillEdit } from "react-icons/ai"
 
 export default function Sidebar() {
   const menuItem = [
@@ -28,6 +29,11 @@ export default function Sidebar() {
       path: "/findStudent",
       name: "Find Student",
       icon: <MdFindInPage />
+    },
+    {
+      path: "/setrollno",
+      name: "Set Roll No.",
+      icon: <AiFillEdit />
     }
   ];
   const [isOpen, setIsOpen] = useState(true);

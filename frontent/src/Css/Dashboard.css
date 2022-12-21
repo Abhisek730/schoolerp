@@ -1,0 +1,11 @@
+.dashcard{
+    background-color: #0073B6;
+    color: #fff;
+    width: 300px;
+    text-align: left;
+    height: 150px;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin:10px auto;
+}

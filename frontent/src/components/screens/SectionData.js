@@ -40,14 +40,7 @@ const Sections = [
         _id: 10,
         section: 'J',
     },
-    {
-        _id: 11,
-        section: 'K',
-    },
-    {
-        _id: 12,
-        section: 'L',
-    },
+
 
 ]
 

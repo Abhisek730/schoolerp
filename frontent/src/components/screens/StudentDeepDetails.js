@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import TableCom from "./TableCom";
+
 
 export default function StudentDeepDetails() {
   const [data, setData] = useState([]);
-  console.log(useParams());
+
   const { classid, sectionid } = useParams();
 
   useEffect(() => {
     // fetching all students
     if (classid == "all") {
-      fetch("/dash", {
+      fetch("http://localhost:5000/", {
         headers: {
           "Content-Type": "application/json",
         },
@@ -18,11 +18,11 @@ export default function StudentDeepDetails() {
         .then((res) => res.json())
         .then((result) => {
           setData(result);
-          console.log(result);
+
         })
         .catch((err) => console.log(err));
     } else {
-      fetch("/mystuds", {
+      fetch("http://localhost:5000/mystuds", {
         headers: {
           "Content-Type": "application/json",
           class: classid,
@@ -32,7 +32,7 @@ export default function StudentDeepDetails() {
         .then((res) => res.json())
         .then((result) => {
           setData(result);
-          console.log(result);
+
         })
         .catch((err) => console.log(err));
     }
@@ -56,8 +56,9 @@ export default function StudentDeepDetails() {
         <thead>
           <tr>
             <th>SN</th>
-            <th>Student Name</th>
             <th>Admission No</th>
+            <th>Roll no.</th>
+            <th>Student Name</th>
             <th>DOB</th>
             <th>Father Name</th>
             <th>Mother Name</th>
@@ -72,8 +73,9 @@ export default function StudentDeepDetails() {
           {data.map((student, i) => (
             <tr key={i} className="contents">
               <td>{i + 1}</td>
-              <td>{student.First_Name}</td>
               <td>{student.Admission_No}</td>
+              <td>{student.Roll_No}</td>
+              <td>{student.First_Name}</td>
               <td>{student.DOB}</td>
               <td>{student.Father_Name}</td>
               <td>{student.Mother_Name}</td>
@@ -82,7 +84,7 @@ export default function StudentDeepDetails() {
               <td>{student.Admission_Date}</td>
               <td>{student.Class}</td>
               <td>{student.Section}</td>
-              <td>{student.Roll_No}</td>
+
             </tr>
           ))}
         </tbody>
